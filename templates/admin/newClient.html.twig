@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Nouveau client</h2>
+    <hr>
+{{ form_start(form) }}
+{{ form_row(form.raisonSocial) }}
+    <div class="row">
+        <div class="col-6">{{ form_row(form.nomSignataire) }}</div>
+        <div class="col-6">{{ form_row(form.prenomSignataire) }}</div>
+    </div>
+{{ form_row(form.fonctionSignataire) }}
+    <div class="row">
+        <div class="col-6">{{ form_row(form.telephone) }}</div>
+        <div class="col-6">{{ form_row(form.email) }}</div>
+    </div>
+    <input type="submit" value="Définir le périmètre éléctricité" class="btn btn-sm btn-info">
+{{ form_end(form) }}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Périmètre éléctricité :  {{ client.perimetreElectricites|length + 1 }}/5</h2>
+    <hr>
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-6">{{ form_row(form.dateFourniture) }}</div>
+        <div class="col-6">{{ form_row(form.PDL) }}</div>
+    </div>
+    <div class="row">
+        <div class="col-6">{{ form_row(form.nomPtLivraison) }}</div>
+        <div class="col-6">{{ form_row(form.segmentation) }}</div>
+    </div>
+    <hr>
+    <h5>Les consommations:</h5>
+    <div class="row">
+        <div class="col-12">{{ form_row(form.pte) }}</div>
+
+    </div>
+    <div class="row">
+        <div class="col-6">{{ form_row(form.HPH) }}</div>
+        <div class="col-6">{{ form_row(form.HCH) }}</div>
+
+    </div>
+    <div class="row">
+        <div class="col-6">{{ form_row(form.HPE) }}</div>
+        <div class="col-6">{{ form_row(form.HCE) }}</div>
+    </div>
+    <div class="row">
+        <div class="col-6"><input type="submit" class="btn btn-sm btn-primary" value="Périmètre éléctricité"></div>
+    </div>
+    {{ form_end(form) }}
+    <div ><a class="btn btn-sm btn-warning" href="{{ path('addGazElec',{id:client.id}) }}" style="float: right">Suivant</a></div>
+
+{% endblock %}

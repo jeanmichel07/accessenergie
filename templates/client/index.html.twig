@@ -1,0 +1,18 @@
+{% extends 'front.html.twig' %}
+{% block body %}
+    <div><br><b style="text-transform: uppercase">{{ c.raisonSocial }}</b></div>
+    <br>
+    <div class="row">
+        <div class="col-4" style="text-align: center"><a href="#"><img width="15%" src="/imagesSites/homeIcon.jpg"></a></div>
+        <div class="col-4" style="padding-left: 30px">
+            Contrats : <ul>
+                <li><a href="{{ path('perimetreGaz') }}">Mes contrat GAZ</a></li>
+                <li><a href="{{ path('perimetreElec') }}">Mes contras électricité</a></li>
+            </ul>
+        </div>
+        <div class="col-4">
+            Mes notifications : <img width="10%" src="/imagesSites/notif.png">
+        </div>
+    </div>
+
+{% endblock %}

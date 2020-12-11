@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <br><a class="btn btn-sm btn-primary" href="{{ path('newVendeur') }}">Nouvelle Vendeur</a><hr>
+    <div class="list">
+        <table class="table">
+            <tr class="table-light">
+                <th>ID</th><th>Nom</th><th>Prénom</th><th>Contact</th>
+            </tr>
+            {% for c in v %}
+            <tr>
+                <td>{{ c.id }}</td><td>{{ c.nom }}</td><td>{{ c.prenom }}</td><td>{{ c.contact }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
