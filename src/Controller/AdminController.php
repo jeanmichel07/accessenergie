@@ -284,4 +284,9 @@ class AdminController extends AbstractController
         $mailer->send($message);
         return $this->redirectToRoute('listVendeur');
     }
+
+    /**
+     * @Route("/list-v")
+     */
+    public function listOffreElec(){}
 }
